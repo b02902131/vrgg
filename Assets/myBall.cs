@@ -55,7 +55,7 @@ public class myBall : MonoBehaviour {
 
 		if (collision.gameObject.CompareTag ("Player")) {
 //			print ("Player Hit");
-			collision.gameObject.GetComponent<PlayerHit>().Hit();
+			collision.gameObject.GetComponent<PlayerHit>().Hit(lastV.magnitude);
 		}
 
 		if (collision.relativeVelocity.magnitude > 2)
